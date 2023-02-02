@@ -1,0 +1,315 @@
+/* ChatNdParticipants */
+.rightBox {
+  width: 25%;
+  background-color: #111;
+  min-width: 250px;
+  padding: 20px 15px;
+}
+
+.rightBox__optionView {
+  height: 100%;
+}
+
+.rightBox__head {
+  width: 100%;
+  text-align: left;
+  height: fit-content;
+}
+
+.rightBox__head .selected {
+  color: white;
+}
+
+.rightBox__head span {
+  font-weight: bold;
+  color: #a6a8ab;
+  cursor: pointer;
+}
+
+.rightBox__head span:nth-child(1) {
+  margin-right: 10px;
+}
+
+.rightBox__chats {
+  height: calc(100% - 60px);
+  overflow: scroll;
+  padding: 10px 0;
+  ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.rightBox__chats::-webkit-scrollbar {
+  display: none;
+}
+
+.rightBox__optionView form input {
+  border: none;
+  width: 100%;
+  height: 40px;
+  background-color: #1a1a1a !important;
+  border-radius: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.rightBox__optionView form input:focus {
+  outline: none;
+}
+
+.rightBox__participants {
+  padding: 10px 0;
+  height: 100%;
+  overflow: scroll;
+  ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.rightBox__participants::-webkit-scrollbar {
+  display: none;
+}
+
+.rightBox__participant {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+
+  .participant-content {
+    width: calc(100% - 48px);
+  }
+}
+
+.rightBox__participant p {
+  font-size: 14px;
+}
+
+
+/* Controls */
+.controls {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  height: 80px;
+  margin-top: 10px;
+  background-color: #111;
+  gap: 10px;
+}
+
+.controls .MuiButton-root .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+
+.controls .MuiButton-root img {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.controls .MuiButton-root {
+  text-transform: unset;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.controls .leave {
+  background-color: #222;
+  color: #fff;
+}
+
+.controls .leave:hover {
+  box-shadow: 1px 2px 2px 1px rgba(1, 1, 1, 0.3);
+}
+
+.controls svg {
+  color: #fff;
+}
+
+
+/* HlsView and VideoTile */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.video {
+  width: calc(50% - 10px);
+  height: unset;
+}
+
+
+/* Message */
+.message {
+  width: fit-content;
+  text-align: left;
+  max-width: 90%;
+}
+
+.message span {
+  font-size: 12px;
+  color: rgb(191, 196, 199);
+}
+
+.message p {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.myMessage {
+  margin-left: auto;
+  text-align: right;
+}
+
+.myMessage p {
+  background-color: #1d84ea;
+  color: white;
+}
+
+
+/* Room */
+.room {
+  display: flex;
+  width: calc(100vw - 140px);
+  height: calc(100vh - 160px);
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.room__streamSpace {
+  width: 100%;
+  height: 100%;
+}
+
+.liveStream {
+  border-radius: 10px;
+  height: calc(100% - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+
+/* Stream */
+.stream {
+  height: calc(100% - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.hls-video::-webkit-media-controls-timeline {
+  display: none;
+}
+
+.free-youtube {
+  width: 100%;
+  height: 100%;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+
+    video::-webkit-media-controls-timeline {
+      display: none;
+    }
+  }
+}
+
+.livestream-types-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .livestream-type-card {
+    width: calc(20% - 8px);
+    background: #0dcaf0;
+    border-radius: 8px;
+    margin-right: 8px;
+
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.liveStream-room-card {
+  position: relative;
+  cursor: pointer;
+
+  .room-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .room-card-content {
+    width: calc(100% - 45px);
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.livestream-container {
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  padding: 80px 70px 0;
+
+  .room-detail-content {
+    width: calc(100% - 100px);
+  }
+}
+
+.liveStream-room-image {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.livestream-carousel {
+  height: 300px;
+  padding: 20px;
+}
+
+.screenShare-camera {
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .livestream-carousel {
+    height: 100px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .livestream-carousel {
+    height: 200px;
+  }
+}
