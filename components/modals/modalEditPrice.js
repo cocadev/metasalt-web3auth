@@ -10,7 +10,7 @@ const ModalEditPrice = ({ onClose, changedPrice, setChangedPrice, onSuccess }) =
 
   const dispatch = useDispatch();
   const { eth: ethPrice, matic: maticPrice } = usePrice();
-  const {chain } = useWeb3Auth()
+  const { chain } = useWeb3Auth()
   const price = (chain === 'mumbai' || chain === 'polygon') ? maticPrice : ethPrice;
 
   const onSave = () => {

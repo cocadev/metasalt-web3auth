@@ -7,6 +7,7 @@ import LayoutModal from '../layouts/layoutModal';
 import { useWeb3Auth } from '../../services/web3auth';
 import { PROD } from '../../keys';
 import { CHAINS_PROD, CHAINS_TEST } from '../../constants/dropdownlist';
+import CustomPopover from '../../components/custom/CustomPopover';
 
 const styles = {
   atom1: {
